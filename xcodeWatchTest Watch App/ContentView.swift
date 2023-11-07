@@ -11,16 +11,18 @@ struct ContentView: View {
     @AppStorage("lastFeeding") private var lastFeeding: Double = 0
     @AppStorage("lastDiaperChange") private var lastDiaperChange: Double = 0
     @State private var currentTime = Date()
+    
+    let babyName = "Vincent"
 
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
 
     var body: some View {
         VStack {
             Image(systemName: "heart")
-            
                 .imageScale(.large)
                 .foregroundStyle(.red)
-            Text("Vincent")
+            
+            Text(babyName)
             
             Button(action: {
                 self.lastFeeding = Date().timeIntervalSince1970
