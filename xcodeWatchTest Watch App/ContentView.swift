@@ -40,7 +40,7 @@ struct ContentView: View {
             Button(action: {
                 self.lastDiaperChange = Date().timeIntervalSince1970
             }) {
-                Text("Changed")
+                Text("Change")
                     .padding()
                     .background(Color.red)
                     .foregroundColor(.black)
