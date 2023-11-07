@@ -30,6 +30,7 @@ struct ContentView: View {
                     .background(Color.red)
                     .foregroundColor(.black)
                     .cornerRadius(10)
+                
             }
 
             Text(timeSince(timeInterval: lastFeeding))
