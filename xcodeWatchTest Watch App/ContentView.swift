@@ -28,7 +28,7 @@ struct ContentView: View {
             
             Button(action: {
                 self.lastFeeding = Date().timeIntervalSince1970
-                print(babyName,"is eating!")
+                print(babyName,"just finished eating!")
             }) {
                 Text("Feed")
                     .padding()
