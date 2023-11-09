@@ -12,8 +12,10 @@ struct ContentView: View {
     @AppStorage("lastDiaperChange") private var lastDiaperChange: Double = 0
     @State private var currentTime = Date()
     
+    // set the babys name
     let babyName = "Vincent"
-
+    
+    // timer for updating the count
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
 
     var body: some View {
@@ -26,6 +28,7 @@ struct ContentView: View {
             
             Button(action: {
                 self.lastFeeding = Date().timeIntervalSince1970
+                print(babyName,"is eating!")
             }) {
                 Text("Feed")
                     .padding()
@@ -41,6 +44,7 @@ struct ContentView: View {
 
             Button(action: {
                 self.lastDiaperChange = Date().timeIntervalSince1970
+                print(babyName,"just got a fresh diaper!")
             }) {
                 Text("Change")
                     .padding()
