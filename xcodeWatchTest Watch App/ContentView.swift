@@ -45,7 +45,7 @@ struct ContentView: View {
                     .cornerRadius(10)
             }
 
-            Text("Fed \(timeSince(timeInterval: lastFeeding0)) min ago")
+            Text("Ate \(timeSince(timeInterval: lastFeeding0)) min ago")
                 .padding(-3)
                 .foregroundColor(.orange)
             
