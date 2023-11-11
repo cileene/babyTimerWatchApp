@@ -33,6 +33,8 @@ struct ContentView: View {
                 
             // display babyName
             Text(babyName)
+                .font(.headline)
+                .foregroundColor(Color.white)
                 .padding(.top, -10)
             
             // the Feed button
@@ -54,11 +56,11 @@ struct ContentView: View {
             Text("Ate \(timeSince(timeInterval: lastFeeding0)) min ago")
                 .padding(-3)
                 .foregroundColor(.orange)
+                
             
             // display interval between last two feedings
             Text("Interval \(Int((lastFeeding0 - lastFeeding1) / 60)) min")
                 .font(.caption2)
-                .fontWeight(.thin)
                 .padding(-3)
                 .foregroundColor(.red)
 
@@ -67,8 +69,10 @@ struct ContentView: View {
                 lastDiaperChange1 = lastDiaperChange0
                 self.lastDiaperChange0 = Date().timeIntervalSince1970
                 print(babyName,"just got a fresh diaper!")
+                    
                 // print interval to console
                 print(timeSince(timeInterval: lastDiaperChange1))
+                    
             }) {
                 Text("Change")
                     .padding()
@@ -85,12 +89,10 @@ struct ContentView: View {
             // display interval between last two diaper changes
             Text("Interval \(Int((lastDiaperChange0 - lastDiaperChange1) / 60)) min")
                 .font(.caption2)
-                .fontWeight(.thin)
                 .padding(-3)
                 .foregroundColor(.red)
-            
-          
         }
+        
         .padding()
         .onReceive(timer) { _ in
             self.currentTime = Date()
