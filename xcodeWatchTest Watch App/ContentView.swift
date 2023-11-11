@@ -49,7 +49,7 @@ struct ContentView: View {
                 .padding(-3)
                 .foregroundColor(.red)
             
-            Text("Interval \(timeSince(timeInterval: lastFeeding1)) min")
+            Text("Interval \(Int((lastFeeding0 - lastFeeding1) / 60)) min")
                 .font(.caption2)
                 .fontWeight(.thin)
                 .padding(-3)
@@ -72,7 +72,7 @@ struct ContentView: View {
             Text("Changed \(timeSince(timeInterval: lastDiaperChange0)) min ago")
                 .padding(-3)
                 .foregroundColor(.red)
-            Text("Interval \(timeSince(timeInterval: lastDiaperChange1)) min")
+            Text("Interval \(Int((lastDiaperChange0 - lastDiaperChange1) / 60)) min")
                 .font(.caption2)
                 .fontWeight(.thin)
                 .padding(-3)

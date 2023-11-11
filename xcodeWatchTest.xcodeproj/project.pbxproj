@@ -12,9 +12,6 @@
 		28F2FF552AF97742001B3AF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2FF542AF97742001B3AF2 /* ContentView.swift */; };
 		28F2FF572AF97743001B3AF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F2FF562AF97743001B3AF2 /* Assets.xcassets */; };
 		28F2FF5A2AF97743001B3AF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F2FF592AF97743001B3AF2 /* Preview Assets.xcassets */; };
-		28F2FF642AF97743001B3AF2 /* xcodeWatchTest_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2FF632AF97743001B3AF2 /* xcodeWatchTest_Watch_AppTests.swift */; };
-		28F2FF6E2AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2FF6D2AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITests.swift */; };
-		28F2FF702AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2FF6F2AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +60,7 @@
 		28F2FF562AF97743001B3AF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28F2FF592AF97743001B3AF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		28F2FF5F2AF97743001B3AF2 /* xcodeWatchTest Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xcodeWatchTest Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		28F2FF632AF97743001B3AF2 /* xcodeWatchTest_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xcodeWatchTest_Watch_AppTests.swift; sourceTree = "<group>"; };
 		28F2FF692AF97743001B3AF2 /* xcodeWatchTest Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xcodeWatchTest Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		28F2FF6D2AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xcodeWatchTest_Watch_AppUITests.swift; sourceTree = "<group>"; };
-		28F2FF6F2AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xcodeWatchTest_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				28F2FF512AF97742001B3AF2 /* xcodeWatchTest Watch App */,
-				28F2FF622AF97743001B3AF2 /* xcodeWatchTest Watch AppTests */,
-				28F2FF6C2AF97743001B3AF2 /* xcodeWatchTest Watch AppUITests */,
 				28F2FF482AF97742001B3AF2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,23 +124,6 @@
 				28F2FF592AF97743001B3AF2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		28F2FF622AF97743001B3AF2 /* xcodeWatchTest Watch AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				28F2FF632AF97743001B3AF2 /* xcodeWatchTest_Watch_AppTests.swift */,
-			);
-			path = "xcodeWatchTest Watch AppTests";
-			sourceTree = "<group>";
-		};
-		28F2FF6C2AF97743001B3AF2 /* xcodeWatchTest Watch AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				28F2FF6D2AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITests.swift */,
-				28F2FF6F2AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITestsLaunchTests.swift */,
-			);
-			path = "xcodeWatchTest Watch AppUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +293,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F2FF642AF97743001B3AF2 /* xcodeWatchTest_Watch_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F2FF702AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITestsLaunchTests.swift in Sources */,
-				28F2FF6E2AF97743001B3AF2 /* xcodeWatchTest_Watch_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
