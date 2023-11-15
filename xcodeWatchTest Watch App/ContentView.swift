@@ -11,10 +11,24 @@ struct ContentView: View {
     
     // storing babyName and timestamps in @AppStorage
     @AppStorage("babyName") private var babyName: String = "Vincent"
+    
     @AppStorage("lastFeeding 0") private var lastFeeding0: Double = 0
     @AppStorage("lastFeeding 1") private var lastFeeding1: Double = 0
+    @AppStorage("lastFeeding 2") private var lastFeeding2: Double = 0
+    @AppStorage("lastFeeding 3") private var lastFeeding3: Double = 0
+    @AppStorage("lastFeeding 4") private var lastFeeding4: Double = 0
+    @AppStorage("lastFeeding 5") private var lastFeeding5: Double = 0
+    @AppStorage("lastFeeding 6") private var lastFeeding6: Double = 0
+    @AppStorage("lastFeeding 7") private var lastFeeding7: Double = 0
     @AppStorage("lastDiaperChange 0") private var lastDiaperChange0: Double = 0
     @AppStorage("lastDiaperChange 1") private var lastDiaperChange1: Double = 0
+    @AppStorage("lastDiaperChange 2") private var lastDiaperChange2: Double = 0
+    @AppStorage("lastDiaperChange 3") private var lastDiaperChange3: Double = 0
+    @AppStorage("lastDiaperChange 4") private var lastDiaperChange4: Double = 0
+    @AppStorage("lastDiaperChange 5") private var lastDiaperChange5: Double = 0
+    @AppStorage("lastDiaperChange 6") private var lastDiaperChange6: Double = 0
+    @AppStorage("lastDiaperChange 7") private var lastDiaperChange7: Double = 0
+    
     
     // our current time
     @State private var currentTime = Date()
@@ -39,9 +53,11 @@ struct ContentView: View {
             
             // the Feed button
             Button(action: {
-                lastFeeding1 = lastFeeding0
-                self.lastFeeding0 = Date().timeIntervalSince1970
-                print(babyName,"just finished eating!")
+                // Shift the feeding times
+                (lastFeeding7, lastFeeding6, lastFeeding5, lastFeeding4, lastFeeding3, lastFeeding2, lastFeeding1, lastFeeding0) =
+                (lastFeeding6, lastFeeding5, lastFeeding4, lastFeeding3, lastFeeding2, lastFeeding1, lastFeeding0, Date().timeIntervalSince1970)
+                
+                print(babyName, "just finished eating!")
                 // print interval to console
                 print(timeSince(timeInterval: lastFeeding1))
             }) {
@@ -66,13 +82,13 @@ struct ContentView: View {
 
             // the Change button
             Button(action: {
-                lastDiaperChange1 = lastDiaperChange0
-                self.lastDiaperChange0 = Date().timeIntervalSince1970
-                print(babyName,"just got a fresh diaper!")
-                    
+                // Shift the diaper change times
+                (lastDiaperChange7, lastDiaperChange6, lastDiaperChange5, lastDiaperChange4, lastDiaperChange3, lastDiaperChange2, lastDiaperChange1, lastDiaperChange0) =
+                (lastDiaperChange6, lastDiaperChange5, lastDiaperChange4, lastDiaperChange3, lastDiaperChange2, lastDiaperChange1, lastDiaperChange0, Date().timeIntervalSince1970)
+                
+                print(babyName, "just got a fresh diaper!")
                 // print interval to console
                 print(timeSince(timeInterval: lastDiaperChange1))
-                    
             }) {
                 Text("Change")
                     .padding()
